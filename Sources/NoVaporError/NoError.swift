@@ -25,7 +25,7 @@ public struct NoError: Error, Content {
     
     public var fields: [String]?
     
-    public enum Code: String, Content {
+    public enum Code: String, Content, UnknownCaseRepresentable {
         case unknown
         case creating
         case creation
@@ -33,6 +33,8 @@ public struct NoError: Error, Content {
         case missingValues
         case limit
         case validation
+        case notFound
+        static public var unknownCase: NoError.Code = .unknown
     }
     
     public static func create(
