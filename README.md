@@ -1,3 +1,3 @@
 # NoVaporError
 
-A description of this package.
+Error Middleware & Custom Error for Vapor applications.
